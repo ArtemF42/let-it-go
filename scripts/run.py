@@ -9,13 +9,13 @@ import hydra
 import numpy as np
 import polars as pl
 import torch
-from clearml import Task
 from lightning import Trainer, seed_everything
 from lightning.pytorch.callbacks import EarlyStopping, ModelCheckpoint
 from omegaconf import DictConfig, OmegaConf
 
 from source.dataset import SequentialDataModule, load_data
 from source.embedding_manager import EmbeddingManager
+from source.logger import Task
 from source.optimizer import ConstrainedNormAdam
 from source.recommender import SASRecModel
 
